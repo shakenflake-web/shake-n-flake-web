@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Shake'n Flake Official Website</title>
+  <meta name="description" content="Shake'n Flake公式サイト。ディスコグラフィ、ライブ日程、グッズ情報を掲載。" />
+
+  <!-- OGP -->
+  <meta property="og:title" content="Shake'n Flake Official Website" />
+  <meta property="og:description" content="Shake'n Flake公式サイト" />
+  <meta property="og:image" content="images/aphoto1.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Search Console（必要なら後で差し替え） -->
+  <meta name="google-site-verification" content="XXXXXXXX" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome（公式SNSアイコン用） -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+
+<body>
+  <!-- 固定ナビ -->
+  <nav class="fixed-nav" aria-label="Primary">
+    <a href="#information">INFORMATION</a>
+    <a href="#discography">DISCOGRAPHY</a>
+    <a href="#live">LIVE</a>
+
+    <!-- GOODSは外部（BASE） -->
+    <a class="nav-external" href="https://thebase.page.link/vyqB" target="_blank" rel="noopener noreferrer">
+      GOODS
+    </a>
+
+    <a href="#contact">CONTACT</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+<div class="video-bg" aria-hidden="true">
+  <iframe
+    src="https://www.youtube.com/embed/KiyF9rtpzTU?autoplay=1&mute=1&loop=1&playlist=KiyF9rtpzTU&controls=0&playsinline=1&rel=0&modestbranding=1"
+    title="Shake'n Flake background video"
+    frameborder="0"
+    allow="autoplay; encrypted-media; picture-in-picture"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+</div>
+
+    <!-- 霧レイヤー -->
+    <div class="hero-haze" aria-hidden="true"></div>
+
+    <div class="hero-text fade">
+      <!-- ロゴ -->
+      <h1 class="logo">
+        <img src="images/logo1.png" alt="Shake'n Flake ロゴ" />
+      </h1>
+
+      <!-- キャッチ -->
+      <p class="catch">
+        2021年結成、東京発の4ピースバンド。<br />
+        「一人旅のお供として連れて行きたくなる音楽」をテーマに活動中。<br /><br />
+        2人のシンガーソングライターによる様々な色の楽曲は、
+        リスナーの心情に溶け込んでいくような情緒を持ち、心を踊らせるものとなっている。<br />
+        そして、シンプルかつキャッチーなバンドサウンドはその楽曲たちを活かす上で欠かせないものとなっている。
+      </p>
+
+      <!-- LISTEN -->
+      <a class="listen-btn" href="https://www.tunecore.co.jp/artists/shake_n_flake" target="_blank" rel="noopener noreferrer">
+        LISTEN
+      </a>
+
+      <!-- SNS（アイコン） -->
+      <div class="sns-links" aria-label="SNS Links">
+        <a href="https://twitter.com/shake_n_flake" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/shake_n_flake" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.youtube.com/@shakenflake" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- INFORMATION -->
+  <section id="information">
+    <h2>INFORMATION</h2>
+
+    <div class="info-list">
+      <div class="info-item">
+        <p class="info-date">2026.02.18</p>
+        <p class="info-text">
+          Shake'n Flakeの公式ホームページができました。
+          <span class="new">NEW</span>
+        </p>
+      </div>
+
+      <!-- 例：追加したい場合はこの形式で増やす
+      <div class="info-item">
+        <p class="info-date">2026.02.10</p>
+        <p class="info-text">新曲「XXX」リリース決定</p>
+      </div>
+      -->
+    </div>
+  </section>
+
+  <!-- DISCOGRAPHY -->
+  <section id="discography">
+    <h2>DISCOGRAPHY</h2>
+
+    <div class="disc-tabs" role="tablist" aria-label="Discography Tabs">
+      <button class="tab-btn active" data-target="single" type="button" role="tab" aria-selected="true" aria-controls="single">
+        SINGLE
+      </button>
+      <button class="tab-btn" data-target="album" type="button" role="tab" aria-selected="false" aria-controls="album">
+        ALBUM
+      </button>
+    </div>
+
+    <!-- SINGLE -->
+    <div class="disc-panel active" id="single" role="tabpanel" aria-labelledby="single-tab">
+      <div class="disc-list">
+        <div class="disc-item">
+          <a href="https://linkco.re/0gN3h8bp" target="_blank" rel="noopener noreferrer">
+            <img src="images/sin1.jpg" alt="キレタミサンガ ジャケット" class="jacket" loading="lazy" />
+          </a>
+          <h3>キレタミサンガ</h3>
+          <p class="meta">Release: 2022.05.13</p>
+        </div>
+
+        <div class="disc-item">
+          <a href="https://linkco.re/GSfBVgdq" target="_blank" rel="noopener noreferrer">
+            <img src="images/sin2.jpg" alt="Hello Hello ジャケット" class="jacket" loading="lazy" />
+          </a>
+          <h3>Hello Hello</h3>
+          <p class="meta">Release: 2022.07.07</p>
+        </div>
+
+        <div class="disc-item">
+          <a href="https://linkco.re/DPqZ8ZHe" target="_blank" rel="noopener noreferrer">
+            <img src="images/sin3.jpg" alt="渚 ジャケット" class="jacket" loading="lazy" />
+          </a>
+          <h3>渚</h3>
+          <p class="meta">Release: 2022.10.06</p>
+        </div>
+
+        <div class="disc-item">
+          <a href="https://linkco.re/ty8xRSx1" target="_blank" rel="noopener noreferrer">
+            <img src="images/sin4.jpg" alt="始まりの詩 ジャケット" class="jacket" loading="lazy" />
+          </a>
+          <h3>始まりの詩</h3>
+          <p class="meta">Release: 2023.03.19</p>
+        </div>
+
+        <div class="disc-item">
+          <a href="https://linkco.re/fNzfVzE7" target="_blank" rel="noopener noreferrer">
+            <img src="images/sin5.jpg" alt="てのなる ジャケット" class="jacket" loading="lazy" />
+          </a>
+          <h3>てのなる</h3>
+          <p class="meta">Release: 2023.08.10</p>
+        </div>
+
+        <div class="disc-item">
+          <a href="https://linkco.re/fNzfVzE7" target="_blank" rel="noopener noreferrer">
+            <img src="images/sin6.jpg" alt="ねこのうた ジャケット" class="jacket" loading="lazy" />
+          </a>
+          <h3>ねこのうた</h3>
+          <p class="meta">Release: 2023.10.21</p>
+        </div>
+
+        <div class="disc-item">
+          <a href="https://linkco.re/Mf85Ddch" target="_blank" rel="noopener noreferrer">
+            <img src="images/sin7.jpg" alt="鳴く空 ジャケット" class="jacket" loading="lazy" />
+          </a>
+          <h3>鳴く空</h3>
+          <p class="meta">Release: 2025.09.27</p>
+        </div>
+
+        <div class="disc-item latest">
+          <a href="https://linkco.re/Vgf89YCH" target="_blank" rel="noopener noreferrer">
+            <img src="images/sin8.jpg" alt="面影 ジャケット" class="jacket" loading="lazy" />
+          </a>
+          <h3>面影</h3>
+          <p class="meta">Release: 2025.12.24</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ALBUM -->
+    <div class="disc-panel" id="album" role="tabpanel" aria-labelledby="album-tab">
+      <div class="disc-list">
+        <div class="disc-item album-item">
+          <a href="https://linkco.re/5tRgzCGZ?lang=ja" target="_blank" rel="noopener noreferrer">
+            <img src="images/alb1.jpg" alt="忘れ日 ジャケット" class="jacket" loading="lazy" />
+          </a>
+
+          <h4>忘れ日</h4>
+          <p class="meta">Release: 2025.03.01</p>
+
+          <details class="tracklist">
+            <summary>収録曲を見る</summary>
+            <ol>
+              <li>花</li>
+              <li>渚</li>
+              <li>キレタミサンガ</li>
+              <li>ひゅるりら</li>
+              <li>ねこのうた</li>
+              <li>てのなる</li>
+              <li>始まりの詩</li>
+              <li>Hello Hello</li>
+            </ol>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE -->
+  <section id="live">
+    <h2>LIVE</h2>
+
+    <!-- 次回ライブ未定 -->
+    <div class="live-coming">
+      <div class="coming-title">COMING SOON</div>
+      <p class="coming-text">
+        次回ライブは現在調整中です。<br />
+        決まり次第お知らせします。
+      </p>
+    </div>
+
+    <h3 class="subhead">PAST LIVE</h3>
+
+    <div class="live-list">
+      <div class="live-item past soldout">
+        <img src="images/live_20260201.jpg" alt="2026.02.01 フライヤー" loading="lazy" />
+        <div class="live-info">
+          <p class="live-date">2026.02.01</p>
+          <p class="live-venue">下北沢 ERA</p>
+          <span class="pill">SOLD OUT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOODS（ページ上にも残す：不要ならこの<section>ごと削除OK） -->
+  <section id="goods">
+    <h2>GOODS</h2>
+    <p class="note">公式グッズのオンライン販売サイト</p>
+    <a class="goods-link" href="https://thebase.page.link/vyqB" target="_blank" rel="noopener noreferrer">
+      衣屋 鮭瓶 →
+    </a>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>CONTACT</h2>
+
+    <p class="contact-text">
+      出演依頼・お問い合わせは<br />
+      公式SNSのDMよりご連絡ください。
+    </p>
+
+    <div class="contact-links">
+      <a class="contact-btn" href="https://twitter.com/shake_n_flake" target="_blank" rel="noopener noreferrer" aria-label="X DM">
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+        <span>Twitter (X) DM</span>
+      </a>
+
+      <a class="contact-btn" href="https://www.instagram.com/shake_n_flake" target="_blank" rel="noopener noreferrer" aria-label="Instagram DM">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        <span>Instagram DM</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="images/logo2.jpg" alt="Shake'n Flake ロゴ" class="footer-logo" />
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

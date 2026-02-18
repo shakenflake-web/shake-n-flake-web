@@ -1,0 +1,721 @@
+/* =====================
+   Theme: Pale / Poetic (Final)
+===================== */
+
+:root{
+  --bg: #f1f1f1;                 /* 全体背景（淡グレー） */
+  --text: #222;
+  --muted: rgba(34,34,34,.72);
+  --line: rgba(0,0,0,.08);
+  --softline: rgba(0,0,0,.06);
+
+  --panel: rgba(255,255,255,.55);
+
+  --shadow: 0 14px 40px rgba(0,0,0,.12);
+  --shadow-soft: 0 10px 28px rgba(0,0,0,.10);
+
+  --radius: 12px;
+  --radius-lg: 16px;
+  --gap: 44px;
+
+  --accent: #e68a3f;             /* ナビ＆アクセント */
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a{ color: inherit; text-decoration: none; }
+img{ max-width: 100%; height: auto; display: block; }
+
+::selection{ background: rgba(180,180,180,.35); }
+
+/* =====================
+   Fixed Nav（オレンジ＋白文字）
+===================== */
+
+.fixed-nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+
+  padding: 12px 18px;
+
+  background: var(--accent);
+  border-bottom: none;
+}
+
+.fixed-nav a{
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  opacity: 1;
+  padding: 6px 8px;
+  border-radius: 10px;
+  transition: opacity .25s ease;
+}
+
+.fixed-nav a:hover{ opacity: .72; }
+
+.fixed-nav .nav-external::after{
+  content: "↗";
+  font-size: 10px;
+  margin-left: 6px;
+  opacity: .85;
+}
+
+/* =====================
+   Hero
+===================== */
+
+.hero{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.82) contrast(.92) saturate(.95);
+  transform: scale(1.01);
+}
+
+/* 霧・霞（儚く＋読みやすく） */
+.hero-haze{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1200px 600px at 20% 80%, rgba(255,255,255,.18), transparent 60%),
+    linear-gradient(to top, rgba(0,0,0,.25), rgba(0,0,0,.08) 55%, rgba(0,0,0,.00));
+  pointer-events: none;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to bottom,
+    rgba(241,241,241,0.15) 0%,
+    rgba(241,241,241,0.35) 60%,
+    rgba(241,241,241,0.55) 100%
+  );
+  pointer-events: none;
+}
+
+.hero-text{
+  position: absolute;
+  left: clamp(18px, 7vw, 90px);
+  bottom: 14%;
+  max-width: 680px;
+  z-index: 2;
+  color: rgba(255,255,255,.92);
+  text-shadow:
+    0 0 12px rgba(255,255,255,0.35),
+    0 0 24px rgba(255,255,255,0.15);
+}
+
+/* ロゴ（くっきり） */
+.logo img{
+  width: 320px;
+  max-width: 80vw;
+  height: auto;
+  filter:
+    contrast(1.25)
+    brightness(0.95)
+    drop-shadow(0 0 12px rgba(255,255,255,0.25))
+    drop-shadow(0 0 28px rgba(255,255,255,0.10));
+}
+
+.catch{
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 2.05;
+  opacity: .92;
+  text-shadow: 0 0 6px rgba(255,255,255,0.25);
+}
+
+.listen-btn{
+  display: inline-block;
+  margin-top: 22px;
+  padding: 11px 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.75);
+  background: rgba(255,255,255,.06);
+  font-size: 12px;
+  letter-spacing: .22em;
+  transition: background .25s ease, transform .25s ease;
+}
+
+.listen-btn:hover{
+  background: rgba(255,255,255,.16);
+  transform: translateY(-1px);
+}
+
+/* SNS links（Hero下のアイコン） */
+.sns-links{
+  margin-top: 14px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.sns-links a{
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.20);
+
+  color: #fff;
+  font-size: 16px;
+
+  transition: transform .25s ease, background .25s ease;
+}
+
+.sns-links a:hover{
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
+/* =====================
+   Sections
+===================== */
+
+section{
+  padding: 110px clamp(18px, 5vw, 48px);
+}
+
+h2{
+  text-align: center;
+  margin: 0 0 58px;
+  letter-spacing: .28em;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.subhead{
+  margin: 70px 0 18px;
+  text-align: center;
+  letter-spacing: .22em;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+/* =====================
+   INFORMATION
+===================== */
+
+.info-list{
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.info-item{
+  display: flex;
+  gap: 24px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.info-date{
+  width: 110px;
+  font-size: 13px;
+  color: rgba(34,34,34,.55);
+}
+
+.info-text{
+  font-size: 14px;
+  color: var(--text);
+}
+
+.new{
+  margin-left: 8px;
+  font-size: 11px;
+  color: var(--accent);
+}
+
+/* =====================
+   Discography Tabs
+===================== */
+
+.disc-tabs{
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 46px;
+}
+
+.tab-btn{
+  background: transparent;
+  border: 1px solid rgba(0,0,0,.16);
+  color: rgba(34,34,34,.82);
+  padding: 9px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: .18em;
+  transition: background .25s ease, transform .25s ease;
+}
+
+.tab-btn:hover{ transform: translateY(-1px); }
+
+.tab-btn.active{
+  background: rgba(255,255,255,.55);
+  border-color: rgba(0,0,0,.10);
+  color: var(--text);
+}
+
+/* panels */
+.disc-panel{ display: none; }
+.disc-panel.active{ display: block; }
+
+/* =====================
+   Discography Grid
+===================== */
+
+.disc-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+.disc-item{
+  width: 180px;
+  text-align: center;
+  position: relative;
+}
+
+.jacket{
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  transition: transform .35s ease, opacity .35s ease, box-shadow .35s ease;
+}
+
+.jacket:hover{
+  transform: translateY(-2px) scale(1.02);
+  opacity: .92;
+  box-shadow: var(--shadow);
+}
+
+.disc-item h3,
+.disc-item h4{
+  margin: 14px 0 6px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.meta{
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* NEW badge */
+.disc-item.latest::before{
+  content: "NEW";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: rgba(230, 207, 207, .95);
+  color: rgba(34,34,34,.85);
+  font-size: 10px;
+  padding: 5px 9px;
+  border-radius: 8px;
+  letter-spacing: .18em;
+  box-shadow: 0 8px 20px rgba(0,0,0,.10);
+}
+
+/* Album emphasis */
+.album-item{ width: 270px; }
+.album-item .jacket{ border-radius: var(--radius-lg); }
+
+/* Tracklist */
+.tracklist{
+  margin-top: 14px;
+  text-align: left;
+}
+
+.tracklist summary{
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 18px;
+
+  font-size: 13px;
+  letter-spacing: .12em;
+
+  color: #444;
+  background: rgba(255,255,255,0.60);
+
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 20px;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition: all .25s ease;
+  list-style: none;
+}
+
+.tracklist summary::-webkit-details-marker{ display:none; }
+
+.tracklist summary:hover,
+.tracklist[open] summary{
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.tracklist summary::after{
+  content: "＋";
+  margin-left: 8px;
+  font-weight: 700;
+}
+.tracklist[open] summary::after{ content: "−"; }
+
+.tracklist ol{
+  padding-left: 20px;
+  margin: 10px 0 0;
+}
+
+.tracklist li{
+  font-size: 14px;
+  line-height: 1.9;
+  letter-spacing: .05em;
+  color: var(--text);
+  transition: color .3s ease, text-shadow .3s ease, transform .3s ease;
+}
+
+.tracklist li:hover{
+  color: rgba(34,34,34,.80);
+  text-shadow: 0 0 6px rgba(170,170,170,.55);
+  transform: translateX(2px);
+}
+
+/* =====================
+   LIVE
+===================== */
+
+.live-coming{
+  margin-top: 10px;
+  padding: 70px 20px;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--panel);
+}
+
+.coming-title{
+  font-size: 22px;
+  letter-spacing: .28em;
+  margin-bottom: 16px;
+  color: rgba(34,34,34,.86);
+  font-weight: 400;
+}
+
+.coming-text{
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.95;
+  margin: 0;
+}
+
+.live-list{
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  margin-top: 28px;
+}
+
+.live-item{
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 16px;
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,.35);
+  border: 1px solid var(--softline);
+  position: relative;
+}
+
+.live-item img{
+  width: 220px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 26px rgba(0,0,0,.10);
+}
+
+.live-info{ flex: 1; }
+
+.live-date{
+  font-size: 1.06rem;
+  font-weight: 500;
+  margin: 0;
+  color: var(--text);
+}
+
+.live-venue{
+  margin: 7px 0 18px;
+  color: var(--muted);
+}
+
+.pill{
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.18);
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: rgba(34,34,34,.80);
+  background: rgba(255,255,255,.35);
+}
+
+/* Soldout / Past visuals */
+.live-item.soldout{ opacity: .68; }
+.live-item.past{ opacity: .46; }
+.live-item.past img{ filter: grayscale(100%); }
+
+/* corner labels */
+.live-item.soldout::after,
+.live-item.past::after{
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 12px;
+  font-size: 11px;
+  letter-spacing: .2em;
+  border-radius: 10px;
+  background: rgba(255,255,255,.75);
+  color: rgba(34,34,34,.78);
+  border: 1px solid rgba(0,0,0,.08);
+}
+
+.live-item.soldout::after{ content:"SOLD OUT"; }
+.live-item.past::after{ content:"PAST LIVE"; }
+
+/* =====================
+   GOODS
+===================== */
+
+#goods{ text-align: center; }
+
+.note{
+  margin: -25px 0 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.goods-link{
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 26px;
+
+  font-size: 14px;
+  letter-spacing: .12em;
+
+  color: #444;
+  background: rgba(255,255,255,0.60);
+
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 20px;
+
+  transition: all .25s ease;
+}
+
+.goods-link:hover{
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.goods-link:active{ transform: translateY(1px); }
+
+/* =====================
+   CONTACT
+===================== */
+
+#contact{ text-align: center; }
+
+.contact-text{
+  margin-bottom: 30px;
+  line-height: 1.8;
+  opacity: 0.85;
+}
+
+.contact-links{
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 22px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.60);
+  backdrop-filter: blur(4px);
+
+  color: #444;
+  letter-spacing: .06em;
+
+  transition: all .25s ease;
+}
+
+.contact-btn i{ font-size: 16px; }
+
+.contact-btn:hover{
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* =====================
+   Footer
+===================== */
+
+footer{
+  text-align: center;
+  padding: 54px 0;
+}
+
+.footer-logo{
+  width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: contrast(1.4) brightness(0.85);
+  opacity: 0.95;
+}
+
+/* =====================
+   Responsive
+===================== */
+
+@media (max-width: 768px){
+  .hero-text{
+    left: 6%;
+    right: 6%;
+    bottom: 12%;
+  }
+
+  section{ padding: 90px 18px; }
+
+  .disc-item{ width: 150px; }
+  .album-item{ width: 290px; }
+
+  .live-item{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .live-item img{
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+/* =====================
+   YouTube 背景動画（mp4の代替）
+   ※既存の.hero / .hero-haze / .hero-text を壊さない
+===================== */
+
+.hero{
+  position: relative;
+  overflow: hidden;
+}
+
+/* 旧videoタグが残ってる場合は非表示（念のため） */
+.hero > video{
+  display: none !important;
+}
+
+/* YouTube背景を一番下に敷く */
+.video-bg{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* 16:9を画面いっぱいに（はみ出しOK） */
+.video-bg iframe{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh;  /* 100vh × 16/9 */
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  border: 0;
+}
+
+/* 霧レイヤーは動画より上 */
+.hero-haze{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* ===== HEROテキスト位置：上に行き過ぎるのを防止 ===== */
+.hero-text{
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 50%;
+  transform: translateY(-45%); /* 少し上寄せにしたいなら -50%→-45% */
+  max-width: 620px;
+  z-index: 2;
+
+  /* 固定ナビ分の安全マージン（隠れ防止） */
+  padding-top: 70px; /* ナビ高さに合わせて調整 */
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px){
+  .hero-text{
+    left: 6%;
+    right: 6%;
+    top: calc(50% + 40px);
+    transform: translateY(-50%);
+    max-width: none;
+  }
+
+  .logo img{
+    height: 52px;
+  }
+}
+
