@@ -740,5 +740,30 @@ footer{
   .catch{
     margin-top: 2px !important;
   }
-
 }
+
+  /* =====================================
+   スマホ：ロゴ(h1)と文章(p)の余白を確実に詰める（最終）
+===================================== */
+@media (max-width: 768px){
+
+  /* h1のデフォルト余白を殺すのがポイント */
+  .hero-text h1.logo{
+    margin: 0 0 4px 0 !important; /* ← ここでロゴ下の余白を調整 */
+    padding: 0 !important;
+    line-height: 1 !important;
+  }
+
+  .hero-text h1.logo img{
+    margin: 0 !important;
+    display: block;
+  }
+
+  /* pのデフォルト余白も明示的に */
+  .hero-text p.catch{
+    margin: 0 !important;         /* ← ロゴとの間の上余白が消える */
+    padding: 0 !important;
+  }
+}
+
+
