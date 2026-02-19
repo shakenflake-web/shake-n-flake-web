@@ -887,3 +887,23 @@ footer{
   }
 
 }
+
+/* =====================================
+   スマホ：段落間（br + br）の空白を狭める
+===================================== */
+
+@media screen and (max-width: 768px){
+
+  /* 通常の行間 */
+  .hero-text .catch{
+    line-height: 1.6 !important;
+  }
+
+  /* 2連続改行の空白だけ縮める */
+  .hero-text .catch br + br{
+    display: block !important;
+    content: "";
+    margin-top: -10px !important; /* ← 空白縮小の核心 */
+  }
+
+}
