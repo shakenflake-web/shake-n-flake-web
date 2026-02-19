@@ -817,3 +817,48 @@ footer{
     right: 12px !important;
   }
 }
+
+/* =====================================
+   MOBILE HERO: ここだけを最終ルールに固定（折り返し安定）
+===================================== */
+@media (max-width: 768px){
+
+  /* heroテキスト領域は画面いっぱい（左右余白だけ） */
+  .hero-text{
+    left: 12px !important;
+    right: 12px !important;
+    bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+
+    max-width: none !important;
+    width: auto !important;
+
+    top: auto !important;
+    transform: none !important;
+  }
+
+  /* ロゴはそのまま（今の縮小値を維持したいならこのまま） */
+  .logo img{
+    width: 140px !important;
+    max-width: 140px !important;
+    height: auto !important;
+  }
+
+  /* 文章：折り返し安定＆読みやすさ（※ここは好みで12pxに） */
+  .catch{
+    font-size: 12px !important;   /* ← 折り返しの見え方も安定しやすい */
+    line-height: 1.7 !important;
+    margin-top: 2px !important;
+  }
+
+  /* LISTEN & SNS（今の縮小値維持） */
+  .listen-btn{
+    font-size: 9px !important;
+    padding: 6px 16px !important;
+  }
+
+  .sns-links a{
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 12px !important;
+  }
+}
