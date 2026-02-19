@@ -907,3 +907,39 @@ footer{
   }
 
 }
+
+/* =====================================
+   MOBILE: ロゴ密着しすぎ＆段落空白が縮まらない問題の最終修正
+===================================== */
+@media screen and (max-width: 768px){
+
+  /* ロゴと文章：密着しすぎを解消（少しだけ余白を戻す） */
+  .hero-text h1.logo{
+    margin: 0 0 4px 0 !important; /* ← 2pxにするともっと詰まる */
+    padding: 0 !important;
+    line-height: 1 !important;
+  }
+  .hero-text h1.logo img{
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  /* 文章：マイナス余白をやめる（密着しすぎの犯人） */
+  .hero-text p.catch{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+    white-space: normal !important;
+  }
+
+  /* ★段落の空白：<br><br> の2個目を消して確実に縮める */
+  .hero-text p.catch br + br{
+    display: none !important;
+  }
+
+  /* <br>自体は有効のまま */
+  .hero-text p.catch br{
+    display: inline !important;
+  }
+}
