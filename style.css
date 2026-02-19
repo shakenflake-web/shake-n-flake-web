@@ -719,3 +719,100 @@ footer{
   }
 }
 
+/* =====================
+   HERO共通（PC）
+===================== */
+.hero{
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+/* YouTube背景を完全カバー */
+.video-bg{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.video-bg iframe{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 177.78vh;  /* 16:9 */
+  height: 100vh;
+
+  transform: translate(-50%, -50%);
+}
+
+/* テキスト */
+.hero-text{
+  position: absolute;
+  z-index: 2;
+
+  left: 8%;
+  right: 8%;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  max-width: 620px;
+}
+
+/* =====================
+   スマホ専用（重要）
+===================== */
+@media (max-width: 768px){
+
+  .hero{
+    min-height: 100vh;
+  }
+
+  /* 動画を縦画面に完全フィット */
+  .video-bg iframe{
+    width: 100vw;
+    height: 56.25vw; /* 16:9 */
+
+    min-height: 100vh;
+    min-width: 177.78vh;
+  }
+
+  /* テキスト位置を中央に */
+  .hero-text{
+
+    left: 6%;
+    right: 6%;
+
+    top: 52%;
+    transform: translateY(-50%);
+
+    max-width: none;
+    text-align: left;
+  }
+
+  /* ロゴサイズ調整 */
+  .logo img{
+    width: 240px;
+    max-width: 80vw;
+  }
+
+  /* キャッチ文字 */
+  .catch{
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  /* LISTENボタン */
+  .listen-btn{
+    margin-top: 16px;
+  }
+
+  /* SNS */
+  .sns-links{
+    margin-top: 12px;
+  }
+
+}
