@@ -718,7 +718,6 @@ footer{
   }
 
   /* TEXT */
-
   .hero-text p.catch{
     margin: 0 !important;
     padding: 0 !important;
@@ -727,28 +726,15 @@ footer{
     white-space: normal !important;
   }
 
-.hero-text p.catch{
-  margin: 0 !important;
-  padding: 0 !important;
-  font-size: 12px !important;
-  line-height: 1.6 !important;
-  white-space: normal !important;
-}
-
-.hero-text p.catch br{
-  display: block !important;
-  height: 0.6em !important;
-}
-
-.hero-text p.catch br + br{
-  height: 1.2em !important;
-}
-  .hero-text p.catch br + br{
-    display: none !important;
+  /* <br> をちゃんと改行として扱う */
+  .hero-text p.catch br{
+    display: block !important;
+    height: 0.6em !important;   /* 1改行ぶんの余白 */
   }
 
-  .hero-text .nowrap{
-    white-space: nowrap !important;
+  /* <br><br> の2個目は少し広め */
+  .hero-text p.catch br + br{
+    height: 1.2em !important;   /* 段落感 */
   }
 
   /* LISTEN BUTTON */
