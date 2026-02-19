@@ -724,17 +724,3 @@ footer{
   white-space: nowrap;
 }
 
-
-/* =====================================
-   スマホ：catch内の<br>を有効化（改行反映させる）
-===================================== */
-@media (max-width: 768px){
-  .catch br{
-    display: inline !important; /* これで消されてても復活する */
-  }
-
-  /* nowrapも効くように（保険） */
-  .nowrap{
-    white-space: nowrap !important;
-  }
-}
