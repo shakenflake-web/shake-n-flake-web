@@ -816,3 +816,82 @@ footer{
   }
 
 }
+
+.hero-text{
+
+  position:absolute;
+
+  left:6%;
+  bottom:10%;
+
+  top:auto;
+  transform:none;
+
+  max-width:520px;
+
+  z-index:2;
+
+  padding-top:0;
+}
+
+@media (max-width:768px){
+
+.hero-text{
+
+  left:6%;
+  right:6%;
+
+  bottom:8%;
+
+  max-width:100%;
+}
+
+.logo img{
+
+  width:220px;
+}
+
+.catch{
+
+  font-size:13px;
+  line-height:1.8;
+}
+
+.listen-btn{
+
+  padding:10px 22px;
+}
+
+.sns-links a{
+
+  width:34px;
+  height:34px;
+}
+
+}
+
+.video-bg{
+
+  position:absolute;
+  inset:0;
+
+  overflow:hidden;
+}
+
+.video-bg iframe{
+
+  position:absolute;
+
+  top:50%;
+  left:50%;
+
+  width:177.78vh;
+  height:56.25vw;
+
+  min-width:100%;
+  min-height:100%;
+
+  transform:translate(-50%,-50%);
+
+  pointer-events:none;
+}
