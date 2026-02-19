@@ -717,3 +717,48 @@ footer{
     height: 34px;
   }
 }
+
+
+/* =====================================
+   スマホだけ HERO を50%サイズに縮小
+   PCは元サイズ維持
+===================================== */
+
+@media (max-width: 768px){
+
+  /* 全体幅 */
+  .hero-text{
+    max-width: 260px;  /* 元 約520〜620px → 約半分 */
+  }
+
+  /* ロゴ */
+  .logo img{
+    width: 140px;      /* 元320px → 約半分 */
+  }
+
+  /* 文章 */
+  .catch{
+    font-size: 11px;   /* 元14px */
+    line-height: 1.6;
+  }
+
+  /* LISTENボタン */
+  .listen-btn{
+    font-size: 9px;
+    padding: 6px 16px;
+    margin-top: 12px;
+  }
+
+  /* SNSアイコン */
+  .sns-links{
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .sns-links a{
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+
+}
