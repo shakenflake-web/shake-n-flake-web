@@ -760,7 +760,6 @@ footer{
 
 }
 
-
 /* ===== Mobile: force <br> line breaks in catch ===== */
 @media screen and (max-width: 768px){
   .hero-text p.catch br{
@@ -772,3 +771,12 @@ footer{
     height: 1.2em !important;
   }
 }
+
+/* スマホで「活動中。」を1行固定 */
+@media screen and (max-width: 768px){
+  .keep-line{
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+}
+
