@@ -825,3 +825,10 @@ footer{
   }
 
 }
+/* スマホ：折り返し対策（数pxだけ幅を増やす） */
+@media (max-width: 768px){
+  .hero-text{
+    left: 12px !important;
+    right: 12px !important;
+  }
+}
