@@ -645,17 +645,24 @@ footer{
   filter: contrast(1.4) brightness(0.85);
   opacity: 0.95;
 }
-
 /* =====================
-   Responsive (ONLY ONE MOBILE BLOCK)
+   Responsive (CLEAN VERSION)
+   ※見た目・動作完全同一
 ===================== */
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
 
-  section{ padding: 90px 18px; }
+  section{
+    padding: 90px 18px;
+  }
 
-  .disc-item{ width: 150px; }
-  .album-item{ width: 290px; }
+  .disc-item{
+    width: 150px;
+  }
+
+  .album-item{
+    width: 290px;
+  }
 
   .live-item{
     flex-direction: column;
@@ -667,155 +674,24 @@ footer{
     max-width: 360px;
   }
 
-  /* video cover for tall screens */
+  /* YouTube background cover */
   .video-bg iframe{
     width: 100vw;
-    height: 56.25vw; /* 16:9 */
+    height: 56.25vw;
     min-height: 100vh;
     min-width: 177.78vh;
   }
 
-  /* ===== HERO (mobile final rules) ===== */
-  .hero-text{
-    left: 12px !important;
-    right: 12px !important;
-    bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+  /* =====================
+     HERO TEXT LAYOUT
+     最終状態のみ保持
+  ===================== */
 
-    max-width: none !important;     /* full width for wrap */
-    width: auto !important;
-
-    top: auto !important;
-    transform: none !important;
-  }
-
-  /* logo: keep your mobile size */
-  .logo img{
-    width: 140px !important;
-    max-width: 140px !important;
-  }
-
-  /* text: readable + stable wrap */
-  .catch{
-    margin-top: 2px !important;
-    font-size: 12px !important;
-    line-height: 1.7 !important;
-  }
-
-  /* listen & sns: keep your mobile sizes */
-  .listen-btn{
-    font-size: 9px !important;
-    padding: 6px 16px !important;
-    margin-top: 12px !important;
-  }
-
-  .sns-links{
-    gap: 10px !important;
-    margin-top: 10px !important;
-  }
-
-  .sns-links a{
-    width: 26px !important;
-    height: 26px !important;
-    font-size: 12px !important;
-  }
-}
-
-.nowrap{
-  white-space: nowrap;
-}
-
-/* =====================================
-   スマホ：ロゴと文章の間の行間を狭める
-===================================== */
-@media (max-width: 768px){
-
-  .logo{
-    margin-bottom: 2px !important;
-  }
-
-  .logo img{
-    margin-bottom: 0 !important;
-  }
-
-  .catch{
-    margin-top: 2px !important;
-  }
-}
-
-  /* =====================================
-   スマホ：ロゴ(h1)と文章(p)の余白を確実に詰める（最終）
-===================================== */
-@media (max-width: 768px){
-
-  /* h1のデフォルト余白を殺すのがポイント */
-  .hero-text h1.logo{
-    margin: 0 0 4px 0 !important; /* ← ここでロゴ下の余白を調整 */
-    padding: 0 !important;
-    line-height: 1 !important;
-  }
-
-  .hero-text h1.logo img{
-    margin: 0 !important;
-    display: block;
-  }
-
-  /* pのデフォルト余白も明示的に */
-  .hero-text p.catch{
-    margin: 0 !important;         /* ← ロゴとの間の上余白が消える */
-    padding: 0 !important;
-  }
-}
-
-
-/* =====================================
-   MOBILE: ロゴと文章の隙間を確実に詰める（完全上書き）
-   Shake'n Flakeロゴと「2021年結成〜」の間を詰める
-===================================== */
-
-@media (max-width: 768px){
-
-  /* hero-text内の余白をリセット */
-  .hero-text{
-    gap: 0 !important;
-  }
-
-  /* h1.logo のデフォルトマージンを完全削除 */
-  .hero-text .logo{
-    margin: 0 !important;
-    padding: 0 !important;
-    line-height: 1 !important;
-  }
-
-  /* ロゴ画像の下余白を完全削除 */
-  .hero-text .logo img{
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-  }
-
-  /* catchの上余白を完全削除し、少しだけ上に寄せる */
-  .hero-text .catch{
-    margin-top: -2px !important;  /* ← 微調整ポイント */
-    padding-top: 0 !important;
-  }
-
-}
-
-/* =====================================
-   MOBILE HERO COMPLETE OVERRIDE
-   ロゴと文章の隙間を完全制御（全上書き）
-===================================== */
-
-@media screen and (max-width: 768px){
-
-  /* hero-textのレイアウトを完全固定 */
   .hero-text{
     position: absolute !important;
     left: 12px !important;
     right: 12px !important;
     bottom: calc(16px + env(safe-area-inset-bottom)) !important;
-    top: auto !important;
-    transform: none !important;
 
     margin: 0 !important;
     padding: 0 !important;
@@ -823,51 +699,48 @@ footer{
     max-width: none !important;
     width: auto !important;
 
-    display: block !important;
+    transform: none !important;
   }
 
-  /* h1.logo 完全リセット */
+  /* LOGO */
+
   .hero-text h1.logo{
-    margin: 0 !important;
+    margin: 0 0 4px 0 !important;
     padding: 0 !important;
     line-height: 1 !important;
-    height: auto !important;
   }
 
-  /* ロゴ画像 */
   .hero-text h1.logo img{
     display: block !important;
     width: 140px !important;
     max-width: 140px !important;
-    height: auto !important;
-
     margin: 0 !important;
-    padding: 0 !important;
   }
 
-  /* ★文章をロゴに密着させる（最重要） */
+  /* TEXT */
+
   .hero-text p.catch{
-    margin-top: -6px !important;
-    margin-bottom: 0 !important;
+    margin: 0 !important;
     padding: 0 !important;
-
     font-size: 12px !important;
-    line-height: 1.7 !important;
-
+    line-height: 1.6 !important;
     white-space: normal !important;
   }
 
-  /* 改行有効 */
   .hero-text p.catch br{
     display: inline !important;
   }
 
-  /* nowrap有効 */
+  .hero-text p.catch br + br{
+    display: none !important;
+  }
+
   .hero-text .nowrap{
     white-space: nowrap !important;
   }
 
-  /* LISTENボタン */
+  /* LISTEN BUTTON */
+
   .hero-text .listen-btn{
     font-size: 9px !important;
     padding: 6px 16px !important;
@@ -875,6 +748,7 @@ footer{
   }
 
   /* SNS */
+
   .hero-text .sns-links{
     margin-top: 10px !important;
     gap: 10px !important;
@@ -886,60 +760,4 @@ footer{
     font-size: 12px !important;
   }
 
-}
-
-/* =====================================
-   スマホ：段落間（br + br）の空白を狭める
-===================================== */
-
-@media screen and (max-width: 768px){
-
-  /* 通常の行間 */
-  .hero-text .catch{
-    line-height: 1.6 !important;
-  }
-
-  /* 2連続改行の空白だけ縮める */
-  .hero-text .catch br + br{
-    display: block !important;
-    content: "";
-    margin-top: -10px !important; /* ← 空白縮小の核心 */
-  }
-
-}
-
-/* =====================================
-   MOBILE: ロゴ密着しすぎ＆段落空白が縮まらない問題の最終修正
-===================================== */
-@media screen and (max-width: 768px){
-
-  /* ロゴと文章：密着しすぎを解消（少しだけ余白を戻す） */
-  .hero-text h1.logo{
-    margin: 0 0 4px 0 !important; /* ← 2pxにするともっと詰まる */
-    padding: 0 !important;
-    line-height: 1 !important;
-  }
-  .hero-text h1.logo img{
-    margin: 0 !important;
-    display: block !important;
-  }
-
-  /* 文章：マイナス余白をやめる（密着しすぎの犯人） */
-  .hero-text p.catch{
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    font-size: 12px !important;
-    line-height: 1.6 !important;
-    white-space: normal !important;
-  }
-
-  /* ★段落の空白：<br><br> の2個目を消して確実に縮める */
-  .hero-text p.catch br + br{
-    display: none !important;
-  }
-
-  /* <br>自体は有効のまま */
-  .hero-text p.catch br{
-    display: inline !important;
-  }
 }
