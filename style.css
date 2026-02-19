@@ -820,7 +820,7 @@ footer{
 @media (max-width: 768px){
 
   .catch{
-    font-size: 7px !important;   /* ← 現在11px → 少しだけ小さく */
+    font-size: 4px !important;   /* ← 現在11px → 少しだけ小さく */
     line-height: 1.5 !important;   /* ← 読みやすさ維持 */
   }
 
