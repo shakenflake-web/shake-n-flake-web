@@ -719,3 +719,7 @@ footer{
     font-size: 12px !important;
   }
 }
+
+.nowrap{
+  white-space: nowrap;
+}
