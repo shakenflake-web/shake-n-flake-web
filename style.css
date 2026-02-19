@@ -895,3 +895,24 @@ footer{
 
   pointer-events:none;
 }
+
+/* ==== FORCE HERO POSITION (debug) ==== */
+.hero-text{
+  left: 6% !important;
+  right: auto !important;
+  bottom: 8% !important;
+  top: auto !important;
+  transform: none !important;
+}
+
+/* ==== FORCE VIDEO COVER (debug) ==== */
+.video-bg{ position:absolute !important; inset:0 !important; overflow:hidden !important; }
+.video-bg iframe{
+  position:absolute !important;
+  top:50% !important; left:50% !important;
+  width:177.78vh !important;
+  height:56.25vw !important;
+  min-width:100% !important;
+  min-height:100% !important;
+  transform:translate(-50%,-50%) !important;
+}
