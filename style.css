@@ -724,3 +724,21 @@ footer{
   white-space: nowrap;
 }
 
+/* =====================================
+   スマホ：ロゴと文章の間の行間を狭める
+===================================== */
+@media (max-width: 768px){
+
+  .logo{
+    margin-bottom: 2px !important;
+  }
+
+  .logo img{
+    margin-bottom: 0 !important;
+  }
+
+  .catch{
+    margin-top: 2px !important;
+  }
+
+}
