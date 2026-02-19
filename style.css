@@ -780,3 +780,38 @@ footer{
   }
 }
 
+/* =====================
+   MOBILE NAV OPTIMIZED
+===================== */
+
+@media screen and (max-width: 768px){
+
+  .fixed-nav{
+
+    justify-content: flex-start;
+    gap: 8px;
+
+    padding: 10px 10px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    white-space: nowrap;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .fixed-nav a{
+
+    font-size: 11px;
+    padding: 8px 10px;
+
+    flex: 0 0 auto;
+  }
+
+  /* スクロールバー非表示（見た目用） */
+  .fixed-nav::-webkit-scrollbar{
+    display: none;
+  }
+
+}
