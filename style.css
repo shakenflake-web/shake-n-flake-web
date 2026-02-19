@@ -798,3 +798,17 @@ footer{
   }
 
 }
+
+/* =====================================
+   スマホ：文章の折り返し幅を画面いっぱいに（最終上書き）
+===================================== */
+@media (max-width: 768px){
+
+  .hero-text{
+    left: 16px !important;
+    right: 16px !important;      /* ← right:auto を潰す */
+    max-width: none !important;  /* ← 260px を潰す */
+    width: auto !important;      /* 念のため */
+  }
+
+}
