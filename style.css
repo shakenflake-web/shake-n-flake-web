@@ -821,7 +821,7 @@ footer{
 
   .catch{
     font-size: 4px !important;   /* ← 現在11px → 少しだけ小さく */
-    line-height: 1.5 !important;   /* ← 読みやすさ維持 */
+    line-height: 1.0 !important;   /* ← 読みやすさ維持 */
   }
 
 }
