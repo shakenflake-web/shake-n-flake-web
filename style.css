@@ -720,45 +720,39 @@ footer{
 
 
 /* =====================================
-   スマホだけ HERO を50%サイズに縮小
-   PCは元サイズ維持
+   スマホだけ HERO を50%サイズに縮小（確実版）
 ===================================== */
 
 @media (max-width: 768px){
 
-  /* 全体幅 */
   .hero-text{
-    max-width: 260px;  /* 元 約520〜620px → 約半分 */
+    left: 16px;
+    right: auto;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+
+    max-width: 260px;
   }
 
-  /* ロゴ */
+  /* ← max-widthも上書きするのが重要 */
   .logo img{
-    width: 140px;      /* 元320px → 約半分 */
+    width: 140px !important;
+    max-width: 140px !important;
   }
 
-  /* 文章 */
   .catch{
-    font-size: 11px;   /* 元14px */
+    font-size: 11px !important;
     line-height: 1.6;
   }
 
-  /* LISTENボタン */
   .listen-btn{
-    font-size: 9px;
-    padding: 6px 16px;
-    margin-top: 12px;
-  }
-
-  /* SNSアイコン */
-  .sns-links{
-    gap: 10px;
-    margin-top: 10px;
+    font-size: 9px !important;
+    padding: 6px 16px !important;
   }
 
   .sns-links a{
-    width: 26px;
-    height: 26px;
-    font-size: 12px;
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 12px !important;
   }
 
 }
