@@ -756,3 +756,19 @@ footer{
   }
 
 }
+
+/* =====================================
+   スマホ：ロゴと文章の間隔を縮める
+===================================== */
+
+@media (max-width: 768px){
+
+  .logo{
+    margin-bottom: 4px !important;
+  }
+
+  .catch{
+    margin-top: 2px !important;
+  }
+
+}
