@@ -767,3 +767,36 @@ footer{
 }
 
 
+/* =====================================
+   MOBILE: ロゴと文章の隙間を確実に詰める（完全上書き）
+   Shake'n Flakeロゴと「2021年結成〜」の間を詰める
+===================================== */
+
+@media (max-width: 768px){
+
+  /* hero-text内の余白をリセット */
+  .hero-text{
+    gap: 0 !important;
+  }
+
+  /* h1.logo のデフォルトマージンを完全削除 */
+  .hero-text .logo{
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+  }
+
+  /* ロゴ画像の下余白を完全削除 */
+  .hero-text .logo img{
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  /* catchの上余白を完全削除し、少しだけ上に寄せる */
+  .hero-text .catch{
+    margin-top: -2px !important;  /* ← 微調整ポイント */
+    padding-top: 0 !important;
+  }
+
+}
