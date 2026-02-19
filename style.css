@@ -1,6 +1,6 @@
 /* =====================
-   Theme: Pale / Poetic (Final)
-   HERO: PC & Mobile = Left-Bottom
+   Theme: Pale / Poetic (CLEAN)
+   - Mobile hero rules are unified (no conflicts)
 ===================== */
 
 :root{
@@ -41,7 +41,7 @@ img{ max-width: 100%; height: auto; display: block; }
 ::selection{ background: rgba(180,180,180,.35); }
 
 /* =====================
-   Fixed Nav（オレンジ＋白文字）
+   Fixed Nav
 ===================== */
 
 .fixed-nav{
@@ -57,7 +57,6 @@ img{ max-width: 100%; height: auto; display: block; }
   padding: 12px 18px;
 
   background: var(--accent);
-  border-bottom: none;
 }
 
 .fixed-nav a{
@@ -65,7 +64,6 @@ img{ max-width: 100%; height: auto; display: block; }
   font-size: 12px;
   font-weight: 500;
   letter-spacing: .12em;
-  opacity: 1;
   padding: 6px 8px;
   border-radius: 10px;
   transition: opacity .25s ease;
@@ -81,7 +79,7 @@ img{ max-width: 100%; height: auto; display: block; }
 }
 
 /* =====================
-   HERO（PC/スマホ共通：左下寄せ）
+   HERO
 ===================== */
 
 .hero{
@@ -92,11 +90,9 @@ img{ max-width: 100%; height: auto; display: block; }
 }
 
 /* 旧videoタグが残ってる場合は非表示（念のため） */
-.hero > video{
-  display: none !important;
-}
+.hero > video{ display: none !important; }
 
-/* YouTube背景 */
+/* YouTube background */
 .video-bg{
   position: absolute;
   inset: 0;
@@ -105,7 +101,7 @@ img{ max-width: 100%; height: auto; display: block; }
   pointer-events: none;
 }
 
-/* 16:9を画面いっぱいに（はみ出しOK） */
+/* Cover (16:9) */
 .video-bg iframe{
   position: absolute;
   top: 50%;
@@ -118,7 +114,7 @@ img{ max-width: 100%; height: auto; display: block; }
   border: 0;
 }
 
-/* 霧・霞（儚く＋読みやすく） */
+/* haze layers */
 .hero-haze{
   position: absolute;
   inset: 0;
@@ -143,16 +139,13 @@ img{ max-width: 100%; height: auto; display: block; }
   pointer-events: none;
 }
 
-/* HEROテキスト：PC/スマホ共通で左下固定 */
+/* hero text (base: left-bottom) */
 .hero-text{
   position: absolute;
   z-index: 2;
 
-  /* 左余白：小画面16px / 中くらいはvw / 大画面は最大90px */
   left: clamp(16px, 6vw, 90px);
   right: auto;
-
-  /* 下余白：小画面16px / 中くらいはvh / 大画面は最大80px */
   bottom: clamp(16px, 8vh, 80px);
   top: auto;
 
@@ -167,11 +160,10 @@ img{ max-width: 100%; height: auto; display: block; }
     0 0 24px rgba(255,255,255,0.15);
 }
 
-/* ロゴ */
+/* logo */
 .logo img{
   width: 320px;
   max-width: 80vw;
-  height: auto;
   filter:
     contrast(1.25)
     brightness(0.95)
@@ -648,7 +640,6 @@ footer{
 
 .footer-logo{
   width: 80px;
-  height: auto;
   display: block;
   margin: 0 auto;
   filter: contrast(1.4) brightness(0.85);
@@ -656,7 +647,7 @@ footer{
 }
 
 /* =====================
-   Responsive
+   Responsive (ONLY ONE MOBILE BLOCK)
 ===================== */
 
 @media (max-width: 768px){
@@ -676,184 +667,50 @@ footer{
     max-width: 360px;
   }
 
-  /* 動画を縦画面に完全フィット */
+  /* video cover for tall screens */
   .video-bg iframe{
     width: 100vw;
     height: 56.25vw; /* 16:9 */
-
     min-height: 100vh;
     min-width: 177.78vh;
   }
 
-  /* iPhone下のホームバー対策 + 横幅はみ出し防止 */
-  .hero-text{
-    left: 16px;
-    right: 16px;
-    bottom: calc(16px + env(safe-area-inset-bottom));
-    max-width: calc(100% - 32px);
-  }
-
-  .logo img{
-    width: 220px;
-    max-width: 80vw;
-  }
-
-  .catch{
-    font-size: 13px;
-    line-height: 1.8;
-  }
-
-  .listen-btn{
-    margin-top: 16px;
-    padding: 10px 22px;
-  }
-
-  .sns-links{
-    margin-top: 12px;
-  }
-
-  .sns-links a{
-    width: 34px;
-    height: 34px;
-  }
-}
-
-
-/* =====================================
-   スマホだけ HERO を50%サイズに縮小（確実版）
-===================================== */
-
-@media (max-width: 768px){
-
-  .hero-text{
-    left: 16px;
-    right: auto;
-    bottom: calc(16px + env(safe-area-inset-bottom));
-
-    max-width: 260px;
-  }
-
-  /* ← max-widthも上書きするのが重要 */
-  .logo img{
-    width: 140px !important;
-    max-width: 140px !important;
-  }
-
-  .catch{
-    font-size: 11px !important;
-    line-height: 1.6;
-  }
-
-  .listen-btn{
-    font-size: 9px !important;
-    padding: 6px 16px !important;
-  }
-
-  .sns-links a{
-    width: 26px !important;
-    height: 26px !important;
-    font-size: 12px !important;
-  }
-
-}
-
-
-/* =====================================
-   スマホ：文章の折り返しを画面いっぱいにする
-===================================== */
-
-@media (max-width: 768px){
-
-  .hero-text{
-
-    left: 16px !important;
-    right: 16px !important;
-
-    max-width: none !important;
-    width: calc(100% - 32px) !important;
-  }
-
-}
-
-@media (max-width: 768px){
-
-  .catch{
-    font-size: 10px !important;
-    line-height: 1.7 !important;
-  }
-
-}
-
-/* =====================================
-   スマホ：文章の折り返し幅を画面いっぱいに（最終上書き）
-===================================== */
-@media (max-width: 768px){
-
-  .hero-text{
-    left: 16px !important;
-    right: 16px !important;      /* ← right:auto を潰す */
-    max-width: none !important;  /* ← 260px を潰す */
-    width: auto !important;      /* 念のため */
-  }
-
-}
-
-/* =====================================
-   スマホ：文章だけ少し小さく（ロゴ・ボタン・SNSはそのまま）
-===================================== */
-
-@media (max-width: 768px){
-
-  .catch{
-    font-size: 10px !important;   /* ← 現在11px → 少しだけ小さく */
-    line-height: 1.7 !important;   /* ← 読みやすさ維持 */
-  }
-
-}
-/* スマホ：折り返し対策（数pxだけ幅を増やす） */
-@media (max-width: 768px){
-  .hero-text{
-    left: 12px !important;
-    right: 12px !important;
-  }
-}
-
-/* =====================================
-   MOBILE HERO: ここだけを最終ルールに固定（折り返し安定）
-===================================== */
-@media (max-width: 768px){
-
-  /* heroテキスト領域は画面いっぱい（左右余白だけ） */
+  /* ===== HERO (mobile final rules) ===== */
   .hero-text{
     left: 12px !important;
     right: 12px !important;
     bottom: calc(16px + env(safe-area-inset-bottom)) !important;
 
-    max-width: none !important;
+    max-width: none !important;     /* full width for wrap */
     width: auto !important;
 
     top: auto !important;
     transform: none !important;
   }
 
-  /* ロゴはそのまま（今の縮小値を維持したいならこのまま） */
+  /* logo: keep your mobile size */
   .logo img{
     width: 140px !important;
     max-width: 140px !important;
-    height: auto !important;
   }
 
-  /* 文章：折り返し安定＆読みやすさ（※ここは好みで12pxに） */
+  /* text: readable + stable wrap */
   .catch{
-    font-size: 12px !important;   /* ← 折り返しの見え方も安定しやすい */
-    line-height: 1.7 !important;
     margin-top: 2px !important;
+    font-size: 12px !important;
+    line-height: 1.7 !important;
   }
 
-  /* LISTEN & SNS（今の縮小値維持） */
+  /* listen & sns: keep your mobile sizes */
   .listen-btn{
     font-size: 9px !important;
     padding: 6px 16px !important;
+    margin-top: 12px !important;
+  }
+
+  .sns-links{
+    gap: 10px !important;
+    margin-top: 10px !important;
   }
 
   .sns-links a{
