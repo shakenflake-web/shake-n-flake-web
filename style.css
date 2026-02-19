@@ -815,3 +815,32 @@ footer{
   }
 
 }
+
+/* =====================
+   MOBILE FIXED NAV (1-row + scroll)
+===================== */
+@media screen and (max-width: 768px){
+
+  .fixed-nav{
+    justify-content: flex-start;           /* 中央寄せをやめる */
+    gap: 10px;                             /* 24px → 圧縮 */
+    padding: 10px 12px;
+    padding-top: calc(10px + env(safe-area-inset-top)); /* iPhoneノッチ対策 */
+
+    overflow-x: auto;                      /* ★はみ出したら横スクロール */
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;                 /* Firefox */
+  }
+
+  .fixed-nav::-webkit-scrollbar{ display: none; } /* iOS/Chrome */
+
+  .fixed-nav a{
+    flex: 0 0 auto;                        /* つぶれない */
+    font-size: 11px;                       /* 12px → 少しだけ小さく */
+    letter-spacing: .08em;                 /* .12em → 少し詰める */
+    padding: 8px 10px;                     /* タップしやすい */
+  }
+}
