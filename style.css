@@ -772,3 +772,29 @@ footer{
   }
 
 }
+
+/* =====================================
+   スマホ：文章の折り返しを画面いっぱいにする
+===================================== */
+
+@media (max-width: 768px){
+
+  .hero-text{
+
+    left: 16px !important;
+    right: 16px !important;
+
+    max-width: none !important;
+    width: calc(100% - 32px) !important;
+  }
+
+}
+
+@media (max-width: 768px){
+
+  .catch{
+    font-size: 12px !important;
+    line-height: 1.7 !important;
+  }
+
+}
