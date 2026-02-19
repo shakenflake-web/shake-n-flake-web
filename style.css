@@ -759,3 +759,16 @@ footer{
   }
 
 }
+
+
+/* ===== Mobile: force <br> line breaks in catch ===== */
+@media screen and (max-width: 768px){
+  .hero-text p.catch br{
+    display: block !important;
+    height: 0.6em !important;
+  }
+  .hero-text p.catch br + br{
+    display: block !important;
+    height: 1.2em !important;
+  }
+}
