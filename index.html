@@ -43,16 +43,7 @@
 
   <!-- HERO -->
   <header class="hero" id="top">
-<div class="video-bg" aria-hidden="true">
-  <iframe
-    src="https://www.youtube.com/embed/KiyF9rtpzTU?autoplay=1&mute=1&loop=1&playlist=KiyF9rtpzTU&controls=0&playsinline=1&rel=0&modestbranding=1"
-    title="Shake'n Flake background video"
-    frameborder="0"
-    allow="autoplay; encrypted-media; picture-in-picture"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen>
-  </iframe>
-</div>
+    <video class="video-bg" src="videos/hero.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
 
     <!-- 霧レイヤー -->
     <div class="hero-haze" aria-hidden="true"></div>
@@ -100,7 +91,7 @@
 
     <div class="info-list">
       <div class="info-item">
-        <p class="info-date">2026.02.18</p>
+        <p class="info-date">2026.11.23</p>
         <p class="info-text">
           Shake'n Flakeの公式ホームページができました。
           <span class="new">NEW</span>
@@ -135,6 +126,22 @@
 
     <!-- 最新 -->
     <div class="disc-item latest">
+      <a href="https://linkco.re/s7HexZpR" target="_blank" rel="noopener noreferrer">
+        <img src="images/haruka.jpg" alt="遙 ジャケット" class="jacket" loading="lazy" />
+      </a>
+      <h3>遙</h3>
+      <p class="meta">Release: 2026.11.07</p>
+    </div>
+
+    <div class="disc-item">
+      <a href="https://linkco.re/Fam7pdCE" target="_blank" rel="noopener noreferrer">
+        <img src="images/sin9.jpg" alt="終わりの詩 ジャケット" class="jacket" loading="lazy" />
+      </a>
+      <h3>終わりの詩</h3>
+      <p class="meta">Release: 2026.04.29</p>
+    </div>
+
+    <div class="disc-item">
       <a href="https://linkco.re/Vgf89YCH" target="_blank" rel="noopener noreferrer">
         <img src="images/sin8.jpg" alt="面影 ジャケット" class="jacket" loading="lazy" />
       </a>
@@ -246,16 +253,279 @@
 
     <h3 class="subhead">PAST LIVE</h3>
 
-    <div class="live-list">
-      <div class="live-item past soldout">
-        <img src="images/live_20260201.jpg" alt="2026.02.01 フライヤー" loading="lazy" />
+    <div class="live-list" id="past-live-list">
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20261108.jpg" alt="RAKUSYOU de AKI（2026.11.08）のフライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2026.11.08</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20260816.jpg" alt="MIZUABI（2026.08.16）のフライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2026.08.16</p>
+          <p class="live-venue">下北沢 ERA</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20260731.jpg" alt="Catch! WAVE!（2026.07.31）のフライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2026.07.31</p>
+          <p class="live-venue">navey floor</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20260527.jpg" alt="Corner（2026.05.27）のフライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2026.05.27</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20260201.jpg" alt="2026.02.01 フライヤー" loading="lazy" />
+        </button>
         <div class="live-info">
           <p class="live-date">2026.02.01</p>
           <p class="live-venue">下北沢 ERA</p>
-          <span class="pill">SOLD OUT</span>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20251005.jpg" alt="AKIKAZE（2025.10.05）のフライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2025.10.05</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20250816.jpg" alt="MAJINATSU. 2025（2025.08.16）のフライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2025.08.16</p>
+          <p class="live-venue">下北沢 Laguna</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20250329.jpg" alt="2025.03.29 下北沢 DaisyBar 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2025.03.29</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20241123.jpg" alt="2024.11.23 下北沢 Duke Capo 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2024.11.23</p>
+          <p class="live-venue">下北沢 Duke Capo</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20240403.jpg" alt="2024.04.03 下北沢 DaisyBar 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2024.04.03</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20231228.jpg" alt="2023.12.28 下北沢 DaisyBar 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2023.12.28</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20231228_flowers.jpg" alt="2023.12.28 下北沢 Flowers Loft 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2023.12.28</p>
+          <p class="live-venue">下北沢 Flowers Loft</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20231125.jpg" alt="2023.11.25 下北沢 DaisyBar 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2023.11.25</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20231021.jpg" alt="2023.10.21 渋谷 Spotify O-Crest 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2023.10.21</p>
+          <p class="live-venue">渋谷 Spotify O-Crest</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20230811.jpg" alt="2023.08.11 下北沢 Laguna 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2023.08.11</p>
+          <p class="live-venue">下北沢 Laguna</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20230731.jpg" alt="2023.07.31 新宿 WildSideTokyo 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2023.07.31</p>
+          <p class="live-venue">新宿 WildSideTokyo</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20230708.jpg" alt="2023.07.08 下北沢 Duke Capo 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2023.07.08</p>
+          <p class="live-venue">下北沢 Duke Capo</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20230601.jpg" alt="2023.06.01 下北沢 Flowers Loft 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2023.06.01</p>
+          <p class="live-venue">下北沢 Flowers Loft</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20230514.jpg" alt="2023.05.14 下北沢 Laguna 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2023.05.14</p>
+          <p class="live-venue">下北沢 Laguna</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20230401.jpg" alt="2023.04.01 下北沢 DaisyBar 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2023.04.01</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20230305.jpg" alt="2023.03.05 下北沢 DaisyBar 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2023.03.05</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20221211.jpg" alt="2022.12.11 下北沢 DaisyBar 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2022.12.11</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20221113.jpg" alt="2022.11.13 渋谷 Spotify O-Crest 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2022.11.13</p>
+          <p class="live-venue">渋谷 Spotify O-Crest</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20221010.jpg" alt="2022.10.10 下北沢 DaisyBar 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2022.10.10</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20220915.jpg" alt="2022.09.15 下北沢 DaisyBar 公演フライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2022.09.15</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20220723.jpg" alt="もっちー誕生祭（2022.07.23）のフライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2022.07.23</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20220528.jpg" alt="飛翔 Vol.2（2022.05.28）のフライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2022.05.28</p>
+          <p class="live-venue">渋谷 Spotify O-Crest</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20220516.jpg" alt="Reddy Teddy（2022.05.16）のフライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2022.05.16</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20220407.jpg" alt="Get Ready（2022.04.07）のフライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2022.04.07</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
+        </div>
+      </div>
+      <div class="live-item past">
+        <button type="button" class="flyer-toggle" aria-pressed="false">
+          <img src="images/live_20220218.jpg" alt="Matchbox（2022.02.18）のフライヤー" loading="lazy" />
+        </button>
+        <div class="live-info">
+          <p class="live-date">2022.02.18</p>
+          <p class="live-venue">下北沢 DaisyBar</p>
         </div>
       </div>
     </div>
+    <button class="live-toggle tab-btn" type="button" aria-controls="past-live-list" aria-expanded="false" hidden>View more...</button>
   </section>
 
   <!-- GOODS（ページ上にも残す：不要ならこの<section>ごと削除OK） -->
