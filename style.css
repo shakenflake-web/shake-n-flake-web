@@ -673,7 +673,9 @@ footer{
 @media screen and (max-width: 768px){
 
   .hero{
-    background: #252525;
+    display: flex;
+    flex-direction: column;
+    background: #777;
     height: auto;
     min-height: 0;
   }
@@ -685,8 +687,12 @@ footer{
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
+    flex: none;
     object-fit: contain;
+    background: #000;
   }
+  .hero-haze, .hero::after{ display: none; }
+
   h2{ margin-bottom: 24px; }
   .disc-tabs{ margin-bottom: 24px; }
   .subhead{ margin-top: 28px; }
@@ -721,6 +727,10 @@ footer{
 
   .hero-text{
     position: relative !important;
+    top: auto !important;
+    flex: none;
+    background: #777;
+    text-shadow: none;
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
@@ -847,22 +857,5 @@ footer{
     letter-spacing: .08em;
     padding: 8px 10px;
     white-space: nowrap;
-  }
-}
-/* Mobile background drawn from the foreground video's current frame */
-.video-blur{ display: none; }
-
-@media screen and (max-width: 768px){
-  .video-blur{
-    display: block;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: blur(24px) brightness(.65);
-    transform: scale(1.12);
-    pointer-events: none;
-    z-index: 0;
   }
 }
