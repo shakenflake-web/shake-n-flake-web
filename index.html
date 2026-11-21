@@ -2,27 +2,43 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; media-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Shake'n Flake Official Website</title>
   <meta name="description" content="Shake'n Flake公式サイト。ディスコグラフィ、ライブ日程、グッズ情報を掲載。" />
 
-  <!-- OGP -->
+  <link rel="canonical" href="https://shakenflake-web.github.io/shake-n-flake-web/" />
+
+  <!-- OGP / SNS共有用。独自ドメインに移行するときは絶対URLも更新してください。 -->
   <meta property="og:title" content="Shake'n Flake Official Website" />
   <meta property="og:description" content="Shake'n Flake公式サイト" />
-  <meta property="og:image" content="images/aphoto1.jpg" />
+  <meta property="og:url" content="https://shakenflake-web.github.io/shake-n-flake-web/" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="Shake'n Flake Official Website" />
+  <meta property="og:image" content="https://shakenflake-web.github.io/shake-n-flake-web/images/aphoto3.jpg" />
+  <meta property="og:image:width" content="2048" />
+  <meta property="og:image:height" content="1365" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:alt" content="Shake'n Flake アーティスト写真" />
   <meta property="og:type" content="website" />
 
-  <!-- Google Search Console（必要なら後で差し替え） -->
-  <meta name="google-site-verification" content="XXXXXXXX" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shake'n Flake Official Website" />
+  <meta name="twitter:description" content="Shake'n Flake公式サイト。ディスコグラフィ、ライブ日程、グッズ情報を掲載。" />
+  <meta name="twitter:image" content="https://shakenflake-web.github.io/shake-n-flake-web/images/aphoto3.jpg" />
+  <meta name="twitter:image:alt" content="Shake'n Flake アーティスト写真" />
 
-  <link rel="stylesheet" href="style.css?v=20261121-bio-restored6" />
+  <!-- Search Consoleを利用する際は、ご自身の確認タグをhead内に追加してください。 -->
 
-  <!-- Font Awesome（公式SNSアイコン用） -->
+  <link rel="stylesheet" href="style.css?v=20261121-security7" />
+
+  <!-- Font Awesome 6.5.2（フォントも同梱し、外部CDNを利用しない） -->
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    href="vendor/fontawesome-6.5.2/css/all.min.css"
   />
 </head>
 
@@ -34,7 +50,7 @@
     <a href="#live">LIVE</a>
 
     <!-- GOODSは外部（BASE） -->
-    <a class="nav-external" href="https://thebase.page.link/vyqB" target="_blank" rel="noopener noreferrer">
+    <a class="nav-external" href="https://shakeflake.base.shop/" target="_blank" rel="noopener noreferrer">
       GOODS
     </a>
 
@@ -112,10 +128,10 @@
     <h2>DISCOGRAPHY</h2>
 
     <div class="disc-tabs" role="tablist" aria-label="Discography Tabs">
-      <button class="tab-btn active" data-target="single" type="button" role="tab" aria-selected="true" aria-controls="single">
+      <button id="single-tab" class="tab-btn active" data-target="single" type="button" role="tab" aria-selected="true" aria-controls="single">
         SINGLE
       </button>
-      <button class="tab-btn" data-target="album" type="button" role="tab" aria-selected="false" aria-controls="album">
+      <button id="album-tab" class="tab-btn" data-target="album" type="button" role="tab" aria-selected="false" aria-controls="album">
         ALBUM
       </button>
     </div>
@@ -158,11 +174,11 @@
     </div>
 
     <div class="disc-item">
-      <a href="https://linkco.re/fNzfVzE7" target="_blank" rel="noopener noreferrer">
+      <a href="https://linkco.re/qCSTChG9" target="_blank" rel="noopener noreferrer">
         <img src="images/sin6.jpg" alt="ねこのうた ジャケット" class="jacket" loading="lazy" />
       </a>
       <h3>ねこのうた</h3>
-      <p class="meta">Release: 2023.10.21</p>
+      <p class="meta">Release: 2023.10.20</p>
     </div>
 
     <div class="disc-item">
@@ -532,7 +548,7 @@
   <section id="goods">
     <h2>GOODS</h2>
     <p class="note">公式グッズのオンライン販売サイト</p>
-    <a class="goods-link" href="https://thebase.page.link/vyqB" target="_blank" rel="noopener noreferrer">
+    <a class="goods-link" href="https://shakeflake.base.shop/" target="_blank" rel="noopener noreferrer">
       衣屋 鮭瓶 →
     </a>
   </section>
@@ -564,6 +580,6 @@
     <img src="images/logo2.jpg" alt="Shake'n Flake ロゴ" class="footer-logo" />
   </footer>
 
-  <script src="script.js?v=20261121-mobile-layout2" defer></script>
+  <script src="script.js?v=20261121-security7" defer></script>
 </body>
 </html>
