@@ -166,6 +166,17 @@ img{ max-width: 100%; height: auto; display: block; }
   text-shadow: 0 0 6px rgba(255,255,255,0.25);
 }
 
+/* Paragraphs wrap naturally at both desktop and mobile widths. */
+.catch p{
+  margin: 0;
+  line-break: strict;
+  overflow-wrap: break-word;
+}
+
+.catch p + p{
+  margin-top: 1em;
+}
+
 .listen-btn{
   display: inline-block;
   margin-top: 22px;
@@ -734,7 +745,7 @@ footer{
     position: relative !important;
     top: auto !important;
     flex: none;
-    background: var(--bg);
+    background: #e8e8e6;
     color: var(--text);
     text-shadow: none;
     left: auto !important;
@@ -766,7 +777,7 @@ footer{
   }
 
   /* TEXT */
-  .hero-text p.catch{
+  .hero-text .catch{
     color: #444;
     opacity: 1;
     text-shadow: none;
@@ -775,17 +786,6 @@ footer{
     font-size: 12px !important;
     line-height: 1.85 !important;
     white-space: normal !important;
-  }
-
-  /* <br> をちゃんと改行として扱う */
-  .hero-text p.catch br{
-    display: block !important;
-    height: 0.6em !important;   /* 1改行ぶんの余白 */
-  }
-
-  /* <br><br> の2個目は少し広め */
-  .hero-text p.catch br + br{
-    height: 1.2em !important;   /* 段落感 */
   }
 
   /* LISTEN BUTTON */
@@ -827,18 +827,6 @@ footer{
     font-size: 12px !important;
   }
 
-}
-
-/* ===== Mobile: force <br> line breaks in catch ===== */
-@media screen and (max-width: 768px){
-  .hero-text p.catch br{
-    display: block !important;
-    height: 0.6em !important;
-  }
-  .hero-text p.catch br + br{
-    display: block !important;
-    height: 1.2em !important;
-  }
 }
 
 /* スマホで「活動中。」を1行固定 */
