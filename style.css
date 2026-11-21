@@ -703,6 +703,11 @@ footer{
     padding: 40px 18px;
   }
 
+  /* Combined with hero bottom padding: 48px between SNS and INFORMATION. */
+  #information{
+    padding-top: 24px;
+  }
+
   .disc-item{
     width: 150px;
   }
@@ -737,7 +742,7 @@ footer{
     bottom: auto !important;
 
     margin: 0 !important;
-    padding: 8px 12px 20px !important;
+    padding: 28px 18px 24px !important;
 
     max-width: none !important;
     width: auto !important;
@@ -748,7 +753,7 @@ footer{
   /* LOGO */
 
   .hero-text h1.logo{
-    margin: 0 0 4px 0 !important;
+    margin: 0 0 18px 0 !important;
     padding: 0 !important;
     line-height: 1 !important;
   }
@@ -768,7 +773,7 @@ footer{
     margin: 0 !important;
     padding: 0 !important;
     font-size: 12px !important;
-    line-height: 1.6 !important;
+    line-height: 1.85 !important;
     white-space: normal !important;
   }
 
@@ -791,7 +796,7 @@ footer{
     border-color: rgba(34,34,34,.32);
     font-size: 9px !important;
     padding: 6px 16px !important;
-    margin-top: 12px !important;
+    margin-top: 24px !important;
   }
 
   .hero-text .listen-btn:hover,
@@ -809,7 +814,7 @@ footer{
   /* SNS */
 
   .hero-text .sns-links{
-    margin-top: 10px !important;
+    margin-top: 16px !important;
     gap: 10px !important;
   }
 
